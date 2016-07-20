@@ -20,6 +20,12 @@ colorAdminApp.config(['$stateProvider', '$urlRouterProvider', function($statePro
             templateUrl: 'template/app.html',
             abstract: true
         })
+        .state('app.dashboard.investment', {
+            url: '/investment',
+            templateUrl: 'views/index.html',
+            data: { pageTitle: 'Investment' },
+            abstract: false
+        })
         .state('app.dashboard', {
             url: '/dashboard',
             template: '<div ui-view></div>',
@@ -47,7 +53,7 @@ colorAdminApp.config(['$stateProvider', '$urlRouterProvider', function($statePro
                             'assets/plugins/jquery-jvectormap/jquery-jvectormap-1.2.2.min.js',
                             'assets/plugins/jquery-jvectormap/jquery-jvectormap-world-mill-en.js',
                             'assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js'
-                        ] 
+                        ]
                     });
                 }]
             }
@@ -71,7 +77,7 @@ colorAdminApp.config(['$stateProvider', '$urlRouterProvider', function($statePro
                             'assets/plugins/jquery-jvectormap/jquery-jvectormap-world-merc-en.js',
                             'assets/plugins/bootstrap-calendar/js/bootstrap_calendar.min.js',
                             'assets/plugins/gritter/js/jquery.gritter.js'
-                        ] 
+                        ]
                     });
                 }]
             }
@@ -150,7 +156,7 @@ colorAdminApp.config(['$stateProvider', '$urlRouterProvider', function($statePro
                         files: [
                             'assets/plugins/gritter/css/jquery.gritter.css',
                             'assets/plugins/gritter/js/jquery.gritter.js'
-                        ] 
+                        ]
                     });
                 }]
             }
@@ -184,7 +190,7 @@ colorAdminApp.config(['$stateProvider', '$urlRouterProvider', function($statePro
                     return $ocLazyLoad.load({
                         files: [
                             'assets/plugins/simple-line-icons/simple-line-icons.css'
-                        ] 
+                        ]
                     });
                 }]
             }
@@ -198,7 +204,7 @@ colorAdminApp.config(['$stateProvider', '$urlRouterProvider', function($statePro
                     return $ocLazyLoad.load({
                         files: [
                             'assets/plugins/ionicons/css/ionicons.min.css'
-                        ] 
+                        ]
                     });
                 }]
             }
@@ -280,7 +286,7 @@ colorAdminApp.config(['$stateProvider', '$urlRouterProvider', function($statePro
                             'assets/plugins/bootstrap-daterangepicker/daterangepicker.js',
                             'assets/plugins/select2/dist/js/select2.min.js',
                             'assets/plugins/bootstrap-eonasdan-datetimepicker/build/js/bootstrap-datetimepicker.min.js'
-                        ] 
+                        ]
                     });
                 }]
             }
@@ -297,7 +303,7 @@ colorAdminApp.config(['$stateProvider', '$urlRouterProvider', function($statePro
                             'assets/plugins/powerange/powerange.min.css',
                             'assets/plugins/switchery/switchery.min.js',
                             'assets/plugins/powerange/powerange.min.js'
-                        ] 
+                        ]
                     });
                 }]
             }
@@ -362,7 +368,7 @@ colorAdminApp.config(['$stateProvider', '$urlRouterProvider', function($statePro
                     });
                 }]
             }
-            
+
         })
         .state('app.table.manage.buttons', {
             url: '/buttons',
