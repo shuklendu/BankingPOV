@@ -12,13 +12,23 @@ var colorAdminApp = angular.module('colorAdminApp', [
 ]);
 
 colorAdminApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/app/dashboard/v2');
+    $urlRouterProvider.otherwise('/app/widget/welcome');
 
     $stateProvider
         .state('app', {
             url: '/app',
             templateUrl: 'template/app.html',
             abstract: true
+        })
+        .state('app.widget', {
+            url: '/widget',
+            template: '<div ui-view></div>',
+            abstract: true
+        })
+        .state('app.widget.welcome', {
+            url: '/welcome',
+            templateUrl: 'views/widget.html',
+            abstract: false
         })
         .state('app.dashboard.investment', {
             url: '/investment',

@@ -1,5 +1,7 @@
 <!-- begin #header -->
-<div ng-include src="'template/header.html'"></div>
+<div ng-if="setting.layout.pageWithoutHeader === false">
+    <div ng-include src="'template/header.html'"></div>
+</div>
 <!-- end #header -->
 
 <div ng-if="setting.layout.pageTopMenu">

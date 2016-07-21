@@ -67,6 +67,7 @@ Website: http://www.seantheme.com/color-admin-v2.0/admin/angularjs/
    59.0 CONTROLLER - Login V2
    60.0 CONTROLLER - Login V3
    61.0 CONTROLLER - Register V3
+   62.0 CONTROLLER - Widget Controller
     <!-- ======== GLOBAL SCRIPT SETTING ======== -->
 */
 
@@ -3098,4 +3099,16 @@ colorAdminApp.controller('registerV3Controller', function($scope, $rootScope, $s
     $scope.submitForm = function(form) {
         $state.go('app.dashboard.v2');
     };
+});
+
+/* -------------------------------
+   62.0 CONTROLLER - Widget Controller
+------------------------------- */
+colorAdminApp.controller('widgetController', function($scope, $rootScope, $state) {
+    $rootScope.setting.layout.pageWithoutHeader = false;
+    $rootScope.setting.layout.paceTop = true;
+    $rootScope.setting.layout.pageWithoutSidebar = false;
+    $rootScope.setting.layout.pageBgWhite = false;
+    $scope.dismissWelcome = false;
+    $scope.activeWidget = "widget1";
 });
