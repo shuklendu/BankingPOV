@@ -12,7 +12,7 @@ var colorAdminApp = angular.module('colorAdminApp', [
 ]);
 
 colorAdminApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/app/widget/welcome');
+    $urlRouterProvider.otherwise('/app/goals');
 
     $stateProvider
         .state('app', {
@@ -25,8 +25,8 @@ colorAdminApp.config(['$stateProvider', '$urlRouterProvider', function($statePro
             template: '<div ui-view></div>',
             abstract: true
         })
-        .state('app.widget.welcome', {
-            url: '/welcome',
+        .state('app.goals', {
+            url: '/goals',
             templateUrl: 'views/widget.html',
             abstract: false
         })

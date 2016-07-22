@@ -6,6 +6,8 @@
 		font-size: 24px;
 		margin-bottom: 0;
 	}
+
+	.widget-welcome p.small-text {font-size: 16px; margin: 0 0 20px 0;}
 	.widget-welcome button{
 		margin: 30px 0;
 		font-size: 24px;
@@ -47,6 +49,9 @@
 	.bank-widget .with-form-control .form-control {
 		height: 50px;
 	}
+	.paginated-widgets .carousel-indicators {
+		margin: 0 0 30px 0;
+	}
 	.paginated-widgets .carousel-indicators li{
 		width: 20px;
 		height: 20px;
@@ -62,7 +67,7 @@
 	<div class="p-40">
 		<div class="row">
         	<!-- begin col-2 -->
-        	<div class="col-md-8 col-md-offset-2 widget-welcome">
+        	<div class="col-md-6 col-md-offset-3 widget-welcome">
         		<div class="welcome-block" ng-hide="dismissWelcome">
         			<h1>Welecome John Dover</h1>
 	        		<p>Your personal and business accounts are now in the same dashboard.</p>
@@ -73,9 +78,8 @@
         		</div>
 				<div class="paginated-widgets" ng-show="dismissWelcome">
 	        		<ol class="carousel-indicators">
-						<li data-target="#myCarousel" data-slide-to="0" ng-class="{active: activeWidget === 'widget1'}"></li>
-						<li data-target="#myCarousel" data-slide-to="0" ng-class="{active: activeWidget === 'widget2'}"></li>
-						<li data-target="#myCarousel" data-slide-to="0" ng-class="{active: activeWidget === 'widget3'}"></li>
+						<li data-target="#myCarousel" data-slide-to="0" ng-class="{active: activeWidget === 'widget1'}" ng-click="activeWidget = 'widget1'"></li>
+						<li data-target="#myCarousel" data-slide-to="0" ng-class="{active: activeWidget === 'widget2'}" ng-click="activeWidget = 'widget2'"></li>
 					</ol>
 					<div class="widgets-inner">
 					    <div class="bank-widget" ng-class="{active: activeWidget === 'widget1'}">
@@ -95,12 +99,37 @@
                             <p><a ng-click="activeWidget = 'widget2'">Skip this step ></a></p>
 					    </div>
 					    <div class="bank-widget" ng-class="{active: activeWidget === 'widget2'}">
-					        <h1>Widget 2</h1>
-					        <p><a ng-click="activeWidget = 'widget3'">Skip this step ></a></p>
-					    </div>
-					    <div class="bank-widget" ng-class="{active: activeWidget === 'widget3'}">
-					        <h1>Widget 3</h1>
-					        <p><a ng-click="activeWidget = 'widget3'">Skip this step ></a></p>
+
+					        <div class="col-md-6 col-md-offset-3">
+					        	<h1>That’s it!</h1>
+					        	<p class="small-text">We're now ready to take you into the dashboard.</p>
+					            <!-- begin panel -->
+					            <div class="panel panel-inverse">
+					                <div class="panel-heading">
+					                    <div class="media media-sm">
+					                            <a class="media-left" href="javascript:;">
+					                                <img src="assets/img/user-5.jpg" alt="" class="media-object rounded-corner" />
+					                            </a>
+					                            <div class="media-body ">
+					                                <large>James Smith</large>
+					                                <p></p>
+					                                <h4><small>Personal Advisor</small></h4>
+					                            </div>
+					                        </div>
+					                </div>
+					                <div class="panel-body">
+					                   <i class="glyphicon  glyphicon-earphone">   <big>323-867-5309</big></i>
+					                   <p></p>
+					                   <i class="glyphicon  glyphicon-earphone">   <big>anne.smith@bankandtrust.com</big></i>
+					                   <p></p>
+					                   <i class="glyphicon  glyphicon-earphone">   <big>Available to Chat Live</big></i>
+					                   <p></p>
+					                </div>
+					            </div>
+					            <p class="small-text">If you have any other questions, you can always contact your personal advisor.</p>
+					            <button type="submit" class="btn btn-primary btn-sm bg-black-lighter" ui-sref="app.dashboard.v2">Let's Do This!</button>
+					            <!-- end panel -->
+				        </div>
 					    </div>
 					 </div>
 	        	</div>
