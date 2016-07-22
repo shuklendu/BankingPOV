@@ -32,9 +32,22 @@ colorAdminApp.config(['$stateProvider', '$urlRouterProvider', function($statePro
         })
         .state('app.dashboard.investment', {
             url: '/investment',
-            templateUrl: 'views/index.html',
+            templateUrl: 'views/investment.html',
             data: { pageTitle: 'Investment' },
-            abstract: false
+            abstract: false,
+            resolve: {
+                service: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load({
+                        serie: true,
+                        files: [
+                            'assets/plugins/powerange/powerange.min.css',
+                            'assets/plugins/powerange/powerange.min.js',
+                            'assets/plugins/switchery/switchery.min.css',
+                            'assets/plugins/switchery/switchery.min.js'
+                        ]
+                    });
+                }]
+            }
         })
         .state('app.dashboard', {
             url: '/dashboard',
