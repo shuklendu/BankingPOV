@@ -28,6 +28,7 @@ colorAdminApp.config(['$stateProvider', '$urlRouterProvider', function($statePro
         .state('app.goals', {
             url: '/goals',
             templateUrl: 'views/widget.html',
+            data: { pageTitle: 'Goals' },
             abstract: false
         })
         .state('app.dashboard.investment', {

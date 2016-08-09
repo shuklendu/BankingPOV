@@ -530,7 +530,7 @@ colorAdminApp.controller('dashboardV2Controller', function($scope, $rootScope, $
             xLabelAngle: 35,
             hideHover: 'auto',
             resize: true,
-            barColors: ['#00acac']
+            barColors: ['#bf9a1f']
         });
         // Morris.Line({
         //     element: 'visitors-line-chart',
@@ -575,7 +575,7 @@ colorAdminApp.controller('dashboardV2Controller', function($scope, $rootScope, $
                 {label: "Rent", value: 6450},
                 {label: "Others", value: 367}
             ],
-            colors: [ '#0BA462','#39B580','#67C69D','#95D7BB'],
+            colors: [ '#BF9A1F','#AA8714','#917108','#F9C004'],
             labelFamily: 'Open Sans',
             labelColor: 'rgba(255,255,255,0.4)',
             labelTextSize: '12px',
