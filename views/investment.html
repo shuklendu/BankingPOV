@@ -15,6 +15,26 @@
                 width: 45%;
                 text-align: right;
             }
+            #wrapper {
+              width:155px;
+              clear:both;
+            }
+            #first {
+              width:25px;
+              float:left;
+            }
+            #second {
+              width:73px;
+              float:left;
+              margin-top: 5px;
+            }
+            #third {
+              width:55px;
+              float:left;
+            }
+            .panel-heading-btn{
+                text-align: center;
+            }
         </style>
     <div class="row">
         <div class="col-md-12">
@@ -22,10 +42,15 @@
                 <div class="panel-heading">
                     <div class="panel-heading-btn">
                         Risk Meter
-                         <div class="progress" style="width:70px;height:8px;border-radius:0px;">
-                                <div class="progress-bar" style="width: 35%"></div>
+                        <div id="wrapper">
+                          <div id="first">Low</div>
+                          <div id="second">
+                            <div style="width:70px;height:8px;border-radius:0px;" class="progress">
+                                <div style="width: 35%" class="progress-bar"></div>
+                                </div>
+                            </div>
+                          <div id="third">High</div>
                         </div>
-
                     </div>
                     <h4 class="panel-title">Retirement <br> $139,862</h4>
                 </div>
@@ -176,10 +201,15 @@
                 <div class="panel-heading">
                     <div class="panel-heading-btn">
                         Risk Meter
-                         <div class="progress" style="width:70px;height:8px;border-radius:0px;">
-                                <div class="progress-bar" style="width: 10%"></div>
+                        <div id="wrapper">
+                          <div id="first">Low</div>
+                          <div id="second">
+                            <div style="width:70px;height:8px;border-radius:0px;" class="progress">
+                                <div style="width: 35%" class="progress-bar"></div>
+                                </div>
+                            </div>
+                          <div id="third">High</div>
                         </div>
-
                     </div>
                     <h4 class="panel-title">Bobby’s College Fund <br> $49,862</h4>
                 </div>
@@ -278,8 +308,14 @@
                 <div class="panel-heading">
                     <div class="panel-heading-btn">
                         Risk Meter
-                         <div class="progress" style="width:70px;height:8px;border-radius:0px;">
-                                <div class="progress-bar" style="width: 90%"></div>
+                        <div id="wrapper">
+                          <div id="first">Low</div>
+                          <div id="second">
+                            <div style="width:70px;height:8px;border-radius:0px;" class="progress">
+                                <div style="width: 35%" class="progress-bar"></div>
+                                </div>
+                            </div>
+                          <div id="third">High</div>
                         </div>
                     </div>
                     <h4 class="panel-title">Vacation Time Fund <br> $9,862</h4>
