@@ -122,7 +122,7 @@ colorAdminApp.controller('appController', ['$rootScope', '$scope', function($roo
         $rootScope.setting.layout.pageWithoutHeader = false;
         $rootScope.setting.layout.pageBgWhite = false;
         $rootScope.setting.layout.pageContentInverseMode = false;
-        
+
         App.scrollTop();
         $('.pace .pace-progress').addClass('hide');
         $('.pace').removeClass('pace-inactive');
@@ -290,16 +290,16 @@ colorAdminApp.controller('dashboardController', function($scope, $rootScope, $st
             {latLng: [0.33, 6.73], name: 'São Tomé and Príncipe'}
         ]
         });
-    
-    
+
+
         /* Line Chart
         ------------------------- */
-        var data1 = [ 
-            [1, 40], [2, 50], [3, 60], [4, 60], [5, 60], [6, 65], [7, 75], [8, 90], [9, 100], [10, 105], 
-            [11, 110], [12, 110], [13, 120], [14, 130], [15, 135],[16, 145], [17, 132], [18, 123], [19, 135], [20, 150] 
+        var data1 = [
+            [1, 40], [2, 50], [3, 60], [4, 60], [5, 60], [6, 65], [7, 75], [8, 90], [9, 100], [10, 105],
+            [11, 110], [12, 110], [13, 120], [14, 130], [15, 135],[16, 145], [17, 132], [18, 123], [19, 135], [20, 150]
         ];
         var data2 = [
-            [1, 10],  [2, 6], [3, 10], [4, 12], [5, 18], [6, 20], [7, 25], [8, 23], [9, 24], [10, 25], 
+            [1, 10],  [2, 6], [3, 10], [4, 12], [5, 18], [6, 20], [7, 25], [8, 23], [9, 24], [10, 25],
             [11, 18], [12, 30], [13, 25], [14, 25], [15, 30], [16, 27], [17, 20], [18, 18], [19, 31], [20, 23]
         ];
         var xLabel = [
@@ -307,8 +307,8 @@ colorAdminApp.controller('dashboardController', function($scope, $rootScope, $st
             [11,''],[12,'May&nbsp;25'],[13,''],[14,''],[15,'May&nbsp;28'],[16,''],[17,''],[18,'May&nbsp;31'],[19,''],[20,'']
         ];
         $.plot($("#interactive-chart"), [{
-            data: data1, 
-            label: "Page Views", 
+            data: data1,
+            label: "Page Views",
             color: blue,
             lines: { show: true, fill:false, lineWidth: 2 },
             points: { show: true, radius: 3, fillColor: '#fff' },
@@ -323,8 +323,8 @@ colorAdminApp.controller('dashboardController', function($scope, $rootScope, $st
         }], {
             xaxis: {  ticks:xLabel, tickDecimals: 0, tickColor: '#ddd' },
             yaxis: {  ticks: 10, tickColor: '#ddd', min: 0, max: 200 },
-            grid: { 
-                hoverable: true, 
+            grid: {
+                hoverable: true,
                 clickable: true,
                 tickColor: "#ddd",
                 borderWidth: 1,
@@ -352,12 +352,12 @@ colorAdminApp.controller('dashboardController', function($scope, $rootScope, $st
                 }
             } else {
                 $("#tooltip").remove();
-                previousPoint = null;            
+                previousPoint = null;
             }
             event.preventDefault();
         });
-    
-    
+
+
         /* Donut Chart
         ------------------------- */
         var donutData = [
@@ -377,7 +377,7 @@ colorAdminApp.controller('dashboardController', function($scope, $rootScope, $st
             },
             legend: { show: true }
         });
-    
+
 
         /* Sparkline
         ------------------------- */
@@ -400,14 +400,14 @@ colorAdminApp.controller('dashboardController', function($scope, $rootScope, $st
             options.lineColor = red;
             options.highlightLineColor = red;
             options.highlightSpotColor = red;
-    
+
             var countWidth = $('#sparkline-unique-visitor').width();
             if (countWidth >= 200) {
                 options.width = '200px';
             } else {
                 options.width = '100%';
             }
-    
+
             $('#sparkline-unique-visitor').sparkline(value, options);
             options.lineColor = orange;
             options.highlightLineColor = orange;
@@ -431,7 +431,7 @@ colorAdminApp.controller('dashboardController', function($scope, $rootScope, $st
             $('#sparkline-return-visitors').sparkline(value, options);
         }
         renderDashboardSparkline();
-    
+
         $(window).on('resize', function() {
             $('#sparkline-unique-visitor').empty();
             $('#sparkline-bounce-rate').empty();
@@ -448,7 +448,7 @@ colorAdminApp.controller('dashboardController', function($scope, $rootScope, $st
         $('#datepicker-inline').datepicker({ todayHighlight: true });
 
 
-    
+
         /* Todolist
         ------------------------- */
         $('[data-click=todolist]').click(function() {
@@ -459,9 +459,9 @@ colorAdminApp.controller('dashboardController', function($scope, $rootScope, $st
                 $(targetList).addClass('active');
             }
         });
-    
 
-    
+
+
         /* Gritter Notification
         ------------------------- */
         setTimeout(function() {
@@ -530,7 +530,7 @@ colorAdminApp.controller('dashboardV2Controller', function($scope, $rootScope, $
             xLabelAngle: 35,
             hideHover: 'auto',
             resize: true,
-            barColors: ['#bf9a1f']
+            barColors: ['#49b6d6']
         });
         // Morris.Line({
         //     element: 'visitors-line-chart',
@@ -623,7 +623,7 @@ colorAdminApp.controller('dashboardV2Controller', function($scope, $rootScope, $
             focusOn: { x: 0.5, y: 0.5, scale: 2 },
             backgroundColor: '#2d353c'
         });
-    
+
 
         /* Calendar
         ------------------------- */
@@ -701,7 +701,7 @@ colorAdminApp.controller('dashboardV2Controller', function($scope, $rootScope, $
 ------------------------------- */
 colorAdminApp.controller('emailInboxController', function($scope, $rootScope, $state) {
     $rootScope.setting.layout.pageContentFullWidth = true;
-    
+
     angular.element(document).ready(function () {
         /* Email Select All
         ------------------------- */
@@ -713,11 +713,11 @@ colorAdminApp.controller('emailInboxController', function($scope, $rootScope, $s
                 $('.table-email tr').addClass('active');
             }
         });
-    
-    
+
+
         /* Email Select Single
         ------------------------- */
-        $('[data-click=email-select-single]').click(function(e) { 
+        $('[data-click=email-select-single]').click(function(e) {
             e.preventDefault();
             var targetRow = $(this).closest('tr');
             if ($(targetRow).hasClass('active')) {
@@ -726,20 +726,20 @@ colorAdminApp.controller('emailInboxController', function($scope, $rootScope, $s
                 $(targetRow).addClass('active');
             }
         });
-    
-    
+
+
         /* Email Remove
         ------------------------- */
-        $('[data-click=email-remove]').click(function(e) { 
+        $('[data-click=email-remove]').click(function(e) {
             e.preventDefault();
             var targetRow = $(this).closest('tr');
             $(targetRow).fadeOut().remove();
         });
-    
-    
+
+
         /* Email Highlight
         ------------------------- */
-        $('[data-click=email-highlight]').click(function(e) { 
+        $('[data-click=email-highlight]').click(function(e) {
             e.preventDefault();
             if ($(this).hasClass('text-danger')) {
                 $(this).removeClass('text-danger');
@@ -757,7 +757,7 @@ colorAdminApp.controller('emailInboxController', function($scope, $rootScope, $s
 ------------------------------- */
 colorAdminApp.controller('emailInboxV2Controller', function($scope, $rootScope, $state) {
     $rootScope.setting.layout.pageContentFullWidth = true;
-    
+
     angular.element(document).ready(function () {
         /* Email Checkbox
         ------------------------- */
@@ -777,8 +777,8 @@ colorAdminApp.controller('emailInboxV2Controller', function($scope, $rootScope, 
                 $('[data-email-action]').addClass('hide');
             }
         });
-    
-    
+
+
         /* Email Action
         ------------------------- */
         $('[data-email-action]').live('click', function() {
@@ -805,15 +805,15 @@ colorAdminApp.controller('emailInboxV2Controller', function($scope, $rootScope, 
 ------------------------------- */
 colorAdminApp.controller('emailComposeController', function($scope, $rootScope, $state) {
     $rootScope.setting.layout.pageContentFullWidth = true;
-    
+
     angular.element(document).ready(function () {
         /* jQuery TagIt
         ------------------------- */
         $('#email-to').tagit({
             availableTags: ["c++", "java", "php", "javascript", "ruby", "python", "c"]
         });
-    
-    
+
+
         /* WYSIHTML5
         ------------------------- */
         $('#wysihtml5').wysihtml5();
@@ -958,7 +958,7 @@ colorAdminApp.controller('uiTreeController', function($scope, $rootScope, $state
             "core": {
                 "themes": {
                     "responsive": false
-                }            
+                }
             },
             "types": {
                 "default": {
@@ -971,7 +971,7 @@ colorAdminApp.controller('uiTreeController', function($scope, $rootScope, $state
             "plugins": ["types"]
         });
 
-        $('#jstree-default').on('select_node.jstree', function(e,data) { 
+        $('#jstree-default').on('select_node.jstree', function(e,data) {
             var link = $('#' + data.selected).find('a');
             if (link.attr("href") != "#" && link.attr("href") != "javascript:;" && link.attr("href") != "") {
                 if (link.attr("target") == "_blank") {
@@ -981,13 +981,13 @@ colorAdminApp.controller('uiTreeController', function($scope, $rootScope, $state
                 return false;
             }
         });
-    
+
         $('#jstree-checkable').jstree({
             'plugins': ["wholerow", "checkbox", "types"],
             'core': {
                 "themes": {
                     "responsive": false
-                },    
+                },
                 'data': [{
                     "text": "Same but with checkboxes",
                     "children": [{
@@ -1034,12 +1034,12 @@ colorAdminApp.controller('uiTreeController', function($scope, $rootScope, $state
                 }
             }
         });
-    
+
         $("#jstree-drag-and-drop").jstree({
             "core": {
                 "themes": {
                     "responsive": false
-                }, 
+                },
                 "check_callback": true,
                 'data': [{
                         "text": "Parent Node",
@@ -1098,7 +1098,7 @@ colorAdminApp.controller('uiTreeController', function($scope, $rootScope, $state
             "state": { "key": "demo2" },
             "plugins": [ "contextmenu", "dnd", "state", "types" ]
         });
-    
+
         $('#jstree-ajax').jstree({
             "core": {
                 "themes": { "responsive": false },
@@ -1156,8 +1156,8 @@ colorAdminApp.controller('formPluginsController', function($scope, $rootScope, $
             todayHighlight: true,
             autoclose: true
         });
-    
-    
+
+
         /* Ion Range Slider
         ------------------------- */
         $('#default_rangeSlider').ionRangeSlider({
@@ -1189,8 +1189,8 @@ colorAdminApp.controller('formPluginsController', function($scope, $rootScope, $
             type: 'single',
             hasGrid: true
         });
-    
-    
+
+
         /* Masked Input
         ------------------------- */
         $("#masked-input-date").mask("99/99/9999");
@@ -1199,26 +1199,26 @@ colorAdminApp.controller('formPluginsController', function($scope, $rootScope, $
         $("#masked-input-ssn").mask("999-99-9999");
         $("#masked-input-pno").mask("aaa-9999-a");
         $("#masked-input-pkey").mask("a*-999-a999");
-    
-    
+
+
         /* Colorpicker
         ------------------------- */
         $('#colorpicker').colorpicker({format: 'hex'});
         $('#colorpicker-prepend').colorpicker({format: 'hex'});
         $('#colorpicker-rgba').colorpicker();
-    
-    
+
+
         /* Timepicker
         ------------------------- */
         $('#timepicker').timepicker();
-    
-    
+
+
         /* Password Indicator
         ------------------------- */
         $('#password-indicator-default').passwordStrength();
         $('#password-indicator-visible').passwordStrength({targetDiv: '#passwordStrengthDiv2'});
-    
-    
+
+
         /* jQuery Autocomplete
         ------------------------- */
         var availableTags = [
@@ -1248,13 +1248,13 @@ colorAdminApp.controller('formPluginsController', function($scope, $rootScope, $
         $('#jquery-autocomplete').autocomplete({
             source: availableTags
         });
-    
-    
+
+
         /* Combobox
         ------------------------- */
         $('.combobox').combobox();
-    
-    
+
+
         /* Bootstrap TagsInput
         ------------------------- */
         $('.bootstrap-tagsinput input').focus(function() {
@@ -1263,13 +1263,13 @@ colorAdminApp.controller('formPluginsController', function($scope, $rootScope, $
         $('.bootstrap-tagsinput input').focusout(function() {
             $(this).closest('.bootstrap-tagsinput').removeClass('bootstrap-tagsinput-focus');
         });
-    
-    
+
+
         /* Selectpicker
         ------------------------- */
         $('.selectpicker').selectpicker('render');
-    
-    
+
+
         /* jQuery Tagit
         ------------------------- */
         $('#jquery-tagIt-default').tagit({
@@ -1296,8 +1296,8 @@ colorAdminApp.controller('formPluginsController', function($scope, $rootScope, $
         $('#jquery-tagIt-danger').tagit({
             availableTags: ["c++", "java", "php", "javascript", "ruby", "python", "c"]
         });
-    
-    
+
+
         /* Date Range Picker
         ------------------------- */
         $('#default-daterange').daterangepicker({
@@ -1352,14 +1352,14 @@ colorAdminApp.controller('formPluginsController', function($scope, $rootScope, $
         }, function(start, end, label) {
             $('#advance-daterange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
         });
-    
-    
+
+
         /* Select2
         ------------------------- */
         $(".default-select2").select2();
         $(".multiple-select2").select2({ placeholder: "Select a state" });
-    
-    
+
+
         /* DateTimepicker
         ------------------------- */
         $('#datetimepicker1').datetimepicker();
@@ -1382,7 +1382,7 @@ colorAdminApp.controller('formPluginsController', function($scope, $rootScope, $
 /* -------------------------------
    18.0 CONTROLLER - Form Slider + Switcher
 ------------------------------- */
-colorAdminApp.controller('formSliderSwitcherController', function($scope, $rootScope, $state) {   
+colorAdminApp.controller('formSliderSwitcherController', function($scope, $rootScope, $state) {
     angular.element(document).ready(function () {
         var green = '#00acac',
         red = '#ff5b57',
@@ -1423,14 +1423,14 @@ colorAdminApp.controller('formSliderSwitcherController', function($scope, $rootS
                 var switchery = new Switchery(this, option);
             });
         }
-    
+
         $('[data-click="check-switchery-state"]').live('click', function() {
             alert($('[data-id="switchery-state"]').prop('checked'));
         });
         $('[data-change="check-switchery-state-text"]').live('change', function() {
             $('[data-id="switchery-state-text"]').text($(this).prop('checked'));
         });
-    
+
         if ($('[data-render="powerange-slider"]').length !== 0) {
             $('[data-render="powerange-slider"]').each(function() {
                 var option = {};
@@ -1474,7 +1474,7 @@ colorAdminApp.controller('formValidationController', function($scope, $rootScope
                         targetMessage = (errorField.$name == 'alphabets') ? 'Only alphabets is allowed' : targetMessage;
                         targetMessage = (errorField.$error.minlength) ? 'You must provide at least 20 characters for this field' : targetMessage;
                         targetMessage = (errorField.$error.maxlength) ? 'You must not exceed the maximum of 200 characters for this field' : targetMessage;
-                        
+
                     $(targetContainer).first().tooltip({
                         placement: 'top',
                         trigger: 'normal',
@@ -1767,7 +1767,7 @@ colorAdminApp.controller('chartFlotController', function($scope, $rootScope, $st
         d6.push([a, parseInt(Math.random() * 5 + 5)]);
     }
     var ticksLabel = [[0, "Monday"], [1, "Tuesday"], [2, "Wednesday"], [3, "Thursday"], [4, "Friday"], [5, "Saturday"]];
-    var stackedChartOptions = { 
+    var stackedChartOptions = {
         xaxis: {  tickColor: 'transparent',  ticks: ticksLabel},
         yaxis: {  tickColor: '#ddd', ticksLength: 10},
         grid: {  hoverable: true,  tickColor: "#ccc", borderWidth: 0, borderColor: 'rgba(0,0,0,0.2)' },
@@ -1780,11 +1780,11 @@ colorAdminApp.controller('chartFlotController', function($scope, $rootScope, $st
         legend: { show: true, labelBoxBorderColor: '#ccc', position: 'ne', noColumns: 1 }
     };
     var stackedChartData = [
-        { data:d1, color: purpleDark, label: 'China', bars: { fillColor: purpleDark } }, 
-        { data:d2, color: purple, label: 'Russia', bars: { fillColor: purple } }, 
-        { data:d3, color: purpleLight, label: 'Canada', bars: { fillColor: purpleLight } }, 
-        { data:d4, color: blueDark, label: 'Japan', bars: { fillColor: blueDark } }, 
-        { data:d5, color: blue, label: 'USA', bars: { fillColor: blue } }, 
+        { data:d1, color: purpleDark, label: 'China', bars: { fillColor: purpleDark } },
+        { data:d2, color: purple, label: 'Russia', bars: { fillColor: purple } },
+        { data:d3, color: purpleLight, label: 'Canada', bars: { fillColor: purpleLight } },
+        { data:d4, color: blueDark, label: 'Japan', bars: { fillColor: blueDark } },
+        { data:d5, color: blue, label: 'USA', bars: { fillColor: blue } },
         { data:d6, color: blueLight, label: 'Others', bars: { fillColor: blueLight } }
     ];
 
@@ -1802,7 +1802,7 @@ colorAdminApp.controller('chartFlotController', function($scope, $rootScope, $st
         } else {
             $("#tooltip").remove();
             previousXValue = null;
-            previousYValue = null;       
+            previousYValue = null;
         }
     });
 
@@ -1818,9 +1818,9 @@ colorAdminApp.controller('chartFlotController', function($scope, $rootScope, $st
         cos.push([i, Math.cos(i)]);
     }
 
-    var trackingChartData = [ 
+    var trackingChartData = [
         { data: sin, label: "Series1", color: dark, shadowSize: 0},
-        { data: cos, label: "Series2", color: red, shadowSize: 0} 
+        { data: cos, label: "Series2", color: red, shadowSize: 0}
     ];
     var trackingChartOptions = {
         series: { lines: { show: true } },
@@ -1868,7 +1868,7 @@ colorAdminApp.controller('chartFlotController', function($scope, $rootScope, $st
     }
     var pieChartOptions = {
         series: {
-            pie: { 
+            pie: {
                 show: true
             }
         },
@@ -1884,7 +1884,7 @@ colorAdminApp.controller('chartFlotController', function($scope, $rootScope, $st
     var donutChartData = [];
     var donutChartOptions = {
         series: {
-            pie: { 
+            pie: {
                 innerRadius: 0.5,
                 show: true,
                 combine: { color: '#999', threshold: 0.1 }
@@ -1915,8 +1915,8 @@ colorAdminApp.controller('chartFlotController', function($scope, $rootScope, $st
     var d1 = [[0, 42], [1, 53], [2,66], [3, 60], [4, 68], [5, 66], [6,71],[7, 75], [8, 69], [9,70], [10, 68], [11, 72], [12, 78], [13, 86]];
     var d2 = [[0, 12], [1, 26], [2,13], [3, 18], [4, 35], [5, 23], [6, 18],[7, 35], [8, 24], [9,14], [10, 14], [11, 29], [12, 30], [13, 43]];
     var interactiveChartData = [{
-        data: d1, 
-        label: "Page Views", 
+        data: d1,
+        label: "Page Views",
         color: purple,
         lines: { show: true, fill:false, lineWidth: 2 },
         points: { show: false, radius: 5, fillColor: '#fff' },
@@ -1948,13 +1948,13 @@ colorAdminApp.controller('chartFlotController', function($scope, $rootScope, $st
             }
         } else {
             $("#tooltip").remove();
-            previousPoint = null;            
+            previousPoint = null;
         }
         event.preventDefault();
     });
-    
-    
-    /* Live Updated Chart 
+
+
+    /* Live Updated Chart
     ------------------------- */
     function update() {
         plot.setData([ getRandomData() ]);
@@ -2030,8 +2030,8 @@ colorAdminApp.controller('chartMorrisController', function($scope, $rootScope, $
             resize: true,
             lineColors: [dark, blue]
         });
-    
-    
+
+
         /* Morris Bar Chart
         ------------------------- */
         Morris.Bar({
@@ -2053,8 +2053,8 @@ colorAdminApp.controller('chartMorrisController', function($scope, $rootScope, $
             resize: true,
             barColors: [blue]
         });
-    
-    
+
+
         /* Morris Area Chart
         ------------------------- */
         Morris.Area({
@@ -2079,8 +2079,8 @@ colorAdminApp.controller('chartMorrisController', function($scope, $rootScope, $
             resize: true,
             lineColors: [red, orange, dark]
         });
-    
-    
+
+
         /* Morris Area Chart
         ------------------------- */
         Morris.Donut({
@@ -2143,7 +2143,7 @@ colorAdminApp.controller('chartJsController', function($scope, $rootScope, $stat
 
     /* ChartJS Bar Chart
     ------------------------- */
-    var randomScalingFactor = function() { 
+    var randomScalingFactor = function() {
         return Math.round(Math.random()*100)
     };
 
@@ -2311,7 +2311,7 @@ colorAdminApp.controller('chartJsController', function($scope, $rootScope, $stat
 ------------------------------- */
 colorAdminApp.controller('chartD3Controller', function($scope, $rootScope, $state) {
     angular.element(document).ready(function () {
-    
+
         /* d3 Line Chart
         ------------------------- */
         nv.addGraph(function() {
@@ -2321,7 +2321,7 @@ colorAdminApp.controller('chartD3Controller', function($scope, $rootScope, $stat
                 cos.push({x: i, y: .5 * Math.cos(i/10)});
             }
             var lineChartData = [
-                { values: sin, key: 'Sine Wave', color: green }, 
+                { values: sin, key: 'Sine Wave', color: green },
                 { values: cos, key: 'Cosine Wave', color: blue }
             ];
             var lineChart = nv.models.lineChart().options({ transitionDuration: 300, useInteractiveGuideline: true });
@@ -2345,13 +2345,13 @@ colorAdminApp.controller('chartD3Controller', function($scope, $rootScope, $stat
             var barChartData = [{
                 key: 'Cumulative Return',
                 values: [
-                    { 'label' : 'A', 'value' : 29, 'color' : red }, 
-                    { 'label' : 'B', 'value' : 15, 'color' : orange }, 
-                    { 'label' : 'C', 'value' : 32, 'color' : green }, 
-                    { 'label' : 'D', 'value' : 196, 'color' : aqua },  
-                    { 'label' : 'E', 'value' : 44, 'color' : blue },  
-                    { 'label' : 'F', 'value' : 98, 'color' : purple },  
-                    { 'label' : 'G', 'value' : 13, 'color' : grey },  
+                    { 'label' : 'A', 'value' : 29, 'color' : red },
+                    { 'label' : 'B', 'value' : 15, 'color' : orange },
+                    { 'label' : 'C', 'value' : 32, 'color' : green },
+                    { 'label' : 'D', 'value' : 196, 'color' : aqua },
+                    { 'label' : 'E', 'value' : 44, 'color' : blue },
+                    { 'label' : 'F', 'value' : 98, 'color' : purple },
+                    { 'label' : 'G', 'value' : 13, 'color' : grey },
                     { 'label' : 'H', 'value' : 5, 'color' : dark }
                 ]
             }];
@@ -2360,10 +2360,10 @@ colorAdminApp.controller('chartD3Controller', function($scope, $rootScope, $stat
                 .y(function(d) { return d.value })
                 .showValues(true)
                 .duration(250);
-            
+
                 barChart.yAxis.axisLabel("Total Sales");
                 barChart.xAxis.axisLabel('Product');
-    
+
             d3.select('#nv-bar-chart').append('svg').datum(barChartData).call(barChart);
             nv.utils.windowResize(barChart.update);
             return barChart;
@@ -2374,16 +2374,16 @@ colorAdminApp.controller('chartD3Controller', function($scope, $rootScope, $stat
         ------------------------- */
         nv.addGraph(function() {
             var pieChartData = [
-                { 'label': 'One', 'value' : 29, 'color': red }, 
-                { 'label': 'Two', 'value' : 12, 'color': orange }, 
-                { 'label': 'Three', 'value' : 32, 'color': green }, 
-                { 'label': 'Four', 'value' : 196, 'color': aqua }, 
-                { 'label': 'Five', 'value' : 17, 'color': blue }, 
-                { 'label': 'Six', 'value' : 98, 'color': purple }, 
-                { 'label': 'Seven', 'value' : 13, 'color': grey }, 
+                { 'label': 'One', 'value' : 29, 'color': red },
+                { 'label': 'Two', 'value' : 12, 'color': orange },
+                { 'label': 'Three', 'value' : 32, 'color': green },
+                { 'label': 'Four', 'value' : 196, 'color': aqua },
+                { 'label': 'Five', 'value' : 17, 'color': blue },
+                { 'label': 'Six', 'value' : 98, 'color': purple },
+                { 'label': 'Seven', 'value' : 13, 'color': grey },
                 { 'label': 'Eight', 'value' : 5, 'color': dark }
             ];
-        
+
             var pieChart = nv.models.pieChart()
               .x(function(d) { return d.label })
               .y(function(d) { return d.value })
@@ -2399,13 +2399,13 @@ colorAdminApp.controller('chartD3Controller', function($scope, $rootScope, $stat
         ------------------------- */
         nv.addGraph(function() {
             var donutChartData = [
-                { 'label': 'One', 'value' : 29, 'color': red }, 
-                { 'label': 'Two', 'value' : 12, 'color': orange }, 
-                { 'label': 'Three', 'value' : 32, 'color': green }, 
-                { 'label': 'Four', 'value' : 196, 'color': aqua }, 
-                { 'label': 'Five', 'value' : 17, 'color': blue }, 
-                { 'label': 'Six', 'value' : 98, 'color': purple }, 
-                { 'label': 'Seven', 'value' : 13, 'color': grey }, 
+                { 'label': 'One', 'value' : 29, 'color': red },
+                { 'label': 'Two', 'value' : 12, 'color': orange },
+                { 'label': 'Three', 'value' : 32, 'color': green },
+                { 'label': 'Four', 'value' : 196, 'color': aqua },
+                { 'label': 'Five', 'value' : 17, 'color': blue },
+                { 'label': 'Six', 'value' : 98, 'color': purple },
+                { 'label': 'Seven', 'value' : 13, 'color': grey },
                 { 'label': 'Eight', 'value' : 5, 'color': dark }
             ];
             var chart = nv.models.pieChart()
@@ -2414,7 +2414,7 @@ colorAdminApp.controller('chartD3Controller', function($scope, $rootScope, $stat
                 .showLabels(true)
                 .labelThreshold(.05)
                 .labelType("percent")
-                .donut(true) 
+                .donut(true)
                 .donutRatio(0.35);
 
             d3.select('#nv-donut-chart').append('svg')
@@ -2441,7 +2441,7 @@ colorAdminApp.controller('chartD3Controller', function($scope, $rootScope, $stat
                 'color' : dark,
                 'values' : [ [ 1138683600000 , 13.242301508051] , [ 1141102800000 , 12.863536342042] , [ 1143781200000 , 21.034044171629] , [ 1146369600000 , 21.419084618803] , [ 1149048000000 , 21.142678863691] , [ 1151640000000 , 26.568489677529] , [ 1154318400000 , 24.839144939905] , [ 1156996800000 , 25.456187462167] , [ 1159588800000 , 26.350164502826] , [ 1162270800000 , 26.47833320519] , [ 1164862800000 , 26.425979547847] , [ 1167541200000 , 28.191461582256] , [ 1170219600000 , 28.930307448808] , [ 1172638800000 , 29.521413891117] , [ 1175313600000 , 28.188285966466] , [ 1177905600000 , 27.704619625832] , [ 1180584000000 , 27.490862424829] , [ 1183176000000 , 28.770679721286] , [ 1185854400000 , 29.060480671449] , [ 1188532800000 , 28.240998844973] , [ 1191124800000 , 33.004893194127] , [ 1193803200000 , 34.075180359928] , [ 1196398800000 , 32.548560664833] , [ 1199077200000 , 30.629727432728] , [ 1201755600000 , 28.642858788159] , [ 1204261200000 , 27.973575227842] , [ 1206936000000 , 27.393351882726] , [ 1209528000000 , 28.476095288523] , [ 1212206400000 , 29.29667866426] , [ 1214798400000 , 29.222333802896] , [ 1217476800000 , 28.092966093843] , [ 1220155200000 , 28.107159262922] , [ 1222747200000 , 25.482974832098] , [ 1225425600000 , 21.208115993834] , [ 1228021200000 , 20.295043095268] , [ 1230699600000 , 15.925754618401] , [ 1233378000000 , 17.162864628346] , [ 1235797200000 , 17.084345773174] , [ 1238472000000 , 22.246007102281] , [ 1241064000000 , 24.530543998509] , [ 1243742400000 , 25.084184918242] , [ 1246334400000 , 16.606166527358] , [ 1249012800000 , 17.239620011628] , [ 1251691200000 , 17.336739127379] , [ 1254283200000 , 25.478492475753] , [ 1256961600000 , 23.017152085245] , [ 1259557200000 , 25.617745423683] , [ 1262235600000 , 24.061133998642] , [ 1264914000000 , 23.223933318644] , [ 1267333200000 , 24.425887263937] , [ 1270008000000 , 35.501471156693] , [ 1272600000000 , 33.775013878676] , [ 1275278400000 , 30.417993630285] , [ 1277870400000 , 30.023598978467] , [ 1280548800000 , 33.327519522436] , [ 1283227200000 , 31.963388450371] , [ 1285819200000 , 30.498967232092] , [ 1288497600000 , 32.403696817912] , [ 1291093200000 , 31.47736071922] , [ 1293771600000 , 31.53259666241] , [ 1296450000000 , 41.760282761548] , [ 1298869200000 , 45.605771243237] , [ 1301544000000 , 39.986557966215] , [ 1304136000000 , 43.846330510051] , [ 1306814400000 , 39.857316881857] , [ 1309406400000 , 37.675127768208] , [ 1312084800000 , 35.775077970313] , [ 1314763200000 , 48.631009702577] , [ 1317355200000 , 42.830831754505] , [ 1320033600000 , 35.611502589362] , [ 1322629200000 , 35.320136981738] , [ 1325307600000 , 31.564136901516] , [ 1327986000000 , 32.074407502433] , [ 1330491600000 , 35.053013769976] , [ 1333166400000 , 26.434568573937] , [ 1335758400000 , 25.305617871002] , [ 1338436800000 , 24.520919418236]]
             }];
-        
+
             var stackedAreaChart = nv.models.stackedAreaChart()
                 .useInteractiveGuideline(true)
                 .x(function(d) { return d[0] })
@@ -2477,21 +2477,21 @@ colorAdminApp.controller('chartD3Controller', function($scope, $rootScope, $stat
             key: 'Stream 1',
             'color' : red,
             values: [
-                { x:1, y: 10}, { x:2, y: 15}, { x:3, y: 16}, { x:4, y: 20}, { x:5, y: 57}, { x:6, y: 42}, { x:7, y: 12}, { x:8, y: 65}, { x:9, y: 34}, { x:10, y: 52}, 
+                { x:1, y: 10}, { x:2, y: 15}, { x:3, y: 16}, { x:4, y: 20}, { x:5, y: 57}, { x:6, y: 42}, { x:7, y: 12}, { x:8, y: 65}, { x:9, y: 34}, { x:10, y: 52},
                 { x:11, y: 23}, { x:12, y: 12}, { x:13, y: 22}, { x:14, y: 22}, { x:15, y: 48}, { x:16, y: 54}, { x:17, y: 32}, { x:18, y: 13}, { x:19, y: 21}, { x:20, y: 12}
             ]
         },{
             key: 'Stream 2',
             'color' : orange,
             values: [
-                { x:1, y: 10}, { x:2, y: 15}, { x:3, y: 16}, { x:4, y: 45}, { x:5, y: 67}, { x:6, y: 34}, { x:7, y: 43}, { x:8, y: 65}, { x:9, y: 32}, { x:10, y: 12}, 
+                { x:1, y: 10}, { x:2, y: 15}, { x:3, y: 16}, { x:4, y: 45}, { x:5, y: 67}, { x:6, y: 34}, { x:7, y: 43}, { x:8, y: 65}, { x:9, y: 32}, { x:10, y: 12},
                 { x:11, y: 43}, { x:12, y: 45}, { x:13, y: 32}, { x:14, y: 32}, { x:15, y: 38}, { x:16, y: 64}, { x:17, y: 42}, { x:18, y: 23}, { x:19, y: 31}, { x:20, y: 22}
             ]
         },{
             key: 'Stream 2',
             'color' : dark,
             values: [
-                { x:1, y: 20}, { x:2, y: 25}, { x:3, y: 26}, { x:4, y: 30}, { x:5, y: 57}, { x:6, y: 52}, { x:7, y: 22}, { x:8, y: 75}, { x:9, y: 44}, { x:10, y: 62}, 
+                { x:1, y: 20}, { x:2, y: 25}, { x:3, y: 26}, { x:4, y: 30}, { x:5, y: 57}, { x:6, y: 52}, { x:7, y: 22}, { x:8, y: 75}, { x:9, y: 44}, { x:10, y: 62},
                 { x:11, y: 35}, { x:12, y: 15}, { x:13, y: 25}, { x:14, y: 25}, { x:15, y: 45}, { x:16, y: 55}, { x:17, y: 35}, { x:18, y: 15}, { x:19, y: 25}, { x:20, y: 15}
             ]
         }];
@@ -2500,7 +2500,7 @@ colorAdminApp.controller('chartD3Controller', function($scope, $rootScope, $stat
                 var stackedBarChart = nv.models.multiBarChart()
                     .stacked(true)
                     .showControls(false);
-            
+
                 var svg = d3.select('#nv-stacked-bar-chart').append('svg').datum(stackedBarChartData);
                 svg.transition().duration(0).call(stackedBarChart);
                 return stackedBarChart;
@@ -2517,7 +2517,7 @@ colorAdminApp.controller('chartD3Controller', function($scope, $rootScope, $stat
 colorAdminApp.controller('calendarController', function($scope, $rootScope, $state) {
     angular.element(document).ready(function () {
         $('#external-events .fc-event').each(function() {
-    
+
             $(this).data('event', {
                 title: $.trim($(this).text()), // use the element's text as the event title
                 stick: true, // maintain when user navigates (see docs on the renderEvent method)
@@ -2529,12 +2529,12 @@ colorAdminApp.controller('calendarController', function($scope, $rootScope, $sta
                 revertDuration: 0  //  original position after the drag
             });
         });
-    
+
         var date = new Date();
         var currentYear = date.getFullYear();
         var currentMonth = date.getMonth() + 1;
             currentMonth = (currentMonth < 10) ? '0' + currentMonth : currentMonth;
-    
+
         $('#calendar').fullCalendar({
             header: {
                 left: 'month,agendaWeek,agendaDay',
@@ -2623,7 +2623,7 @@ colorAdminApp.controller('calendarController', function($scope, $rootScope, $sta
 colorAdminApp.controller('mapVectorController', function($scope, $rootScope, $state) {
     $rootScope.setting.layout.pageContentFullWidth = true;
     $rootScope.setting.layout.pageContentInverseMode = true;
-    
+
     angular.element(document).ready(function () {
         var wHeight = $(window).height();
         $('#world-map').css('height', wHeight);
@@ -2695,10 +2695,10 @@ function handleGoogleMapLoaded() {
 }
 colorAdminApp.controller('mapGoogleController', function($scope, $rootScope, $state) {
     $rootScope.setting.layout.pageContentFullWidth = true;
-    
+
     angular.element(document).ready(function () {
         var mapDefault;
-    
+
         function initialize() {
             var mapOptions = {
                 zoom: 6,
@@ -2708,23 +2708,23 @@ colorAdminApp.controller('mapGoogleController', function($scope, $rootScope, $st
             };
             mapDefault = new google.maps.Map(document.getElementById('google-map-default'), mapOptions);
         }
-    
+
         $(window).unbind('googleMapLoaded');
         $(window).bind('googleMapLoaded', initialize);
         $.getScript("http://maps.google.com/maps/api/js?sensor=false&callback=handleGoogleMapLoaded");
-    
+
         $(window).resize(function() {
             google.maps.event.trigger(mapDefault, "resize");
         });
-    
+
         var defaultMapStyles = [];
-        var flatMapStyles = [{"stylers":[{"visibility":"off"}]},{"featureType":"road","stylers":[{"visibility":"on"},{"color":"#ffffff"}]},{"featureType":"road.arterial","stylers":[{"visibility":"on"},{"color":"#fee379"}]},{"featureType":"road.highway","stylers":[{"visibility":"on"},{"color":"#fee379"}]},{"featureType":"landscape","stylers":[{"visibility":"on"},{"color":"#f3f4f4"}]},{"featureType":"water","stylers":[{"visibility":"on"},{"color":"#7fc8ed"}]},{},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#83cead"}]},{"elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"weight":0.9},{"visibility":"off"}]}]; 
+        var flatMapStyles = [{"stylers":[{"visibility":"off"}]},{"featureType":"road","stylers":[{"visibility":"on"},{"color":"#ffffff"}]},{"featureType":"road.arterial","stylers":[{"visibility":"on"},{"color":"#fee379"}]},{"featureType":"road.highway","stylers":[{"visibility":"on"},{"color":"#fee379"}]},{"featureType":"landscape","stylers":[{"visibility":"on"},{"color":"#f3f4f4"}]},{"featureType":"water","stylers":[{"visibility":"on"},{"color":"#7fc8ed"}]},{},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#83cead"}]},{"elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"weight":0.9},{"visibility":"off"}]}];
         var turquoiseWaterStyles = [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e0efef"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#c0e8e8"}]},{"featureType":"landscape.man_made","elementType":"geometry.fill"},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"water","stylers":[{"color":"#7dcdcd"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]}];
         var icyBlueStyles = [{"stylers":[{"hue":"#2c3e50"},{"saturation":250}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":50},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]}];
         var oldDryMudStyles = [{"featureType":"landscape","stylers":[{"hue":"#FFAD00"},{"saturation":50.2},{"lightness":-34.8},{"gamma":1}]},{"featureType":"road.highway","stylers":[{"hue":"#FFAD00"},{"saturation":-19.8},{"lightness":-1.8},{"gamma":1}]},{"featureType":"road.arterial","stylers":[{"hue":"#FFAD00"},{"saturation":72.4},{"lightness":-32.6},{"gamma":1}]},{"featureType":"road.local","stylers":[{"hue":"#FFAD00"},{"saturation":74.4},{"lightness":-18},{"gamma":1}]},{"featureType":"water","stylers":[{"hue":"#00FFA6"},{"saturation":-63.2},{"lightness":38},{"gamma":1}]},{"featureType":"poi","stylers":[{"hue":"#FFC300"},{"saturation":54.2},{"lightness":-14.4},{"gamma":1}]}];
         var cobaltStyles  = [{"featureType":"all","elementType":"all","stylers":[{"invert_lightness":true},{"saturation":10},{"lightness":10},{"gamma":0.8},{"hue":"#293036"}]},{"featureType":"water","stylers":[{"visibility":"on"},{"color":"#293036"}]}];
         var darkRedStyles   = [{"featureType":"all","elementType":"all","stylers":[{"invert_lightness":true},{"saturation":10},{"lightness":10},{"gamma":0.8},{"hue":"#000000"}]},{"featureType":"water","stylers":[{"visibility":"on"},{"color":"#293036"}]}];
-    
+
         $('[data-map-theme]').click(function() {
             var targetTheme = $(this).attr('data-map-theme');
             var targetLi = $(this).closest('li');
@@ -2787,7 +2787,7 @@ colorAdminApp.controller('galleryController', function($scope, $rootScope, $stat
             }
             return dividerValue;
         }
-    
+
         var container = $('#gallery');
         var dividerValue = calculateDivider();
         var containerWidth = $(container).width() - 20;
@@ -2798,21 +2798,21 @@ colorAdminApp.controller('galleryController', function($scope, $rootScope, $stat
                 columnWidth: columnWidth
             }
         });
-    
+
         $(window).smartresize(function() {
             var dividerValue = calculateDivider();
             var containerWidth = $(container).width() - 20;
             var columnWidth = containerWidth / dividerValue;
             $(container).isotope({
-                masonry: { 
-                    columnWidth: columnWidth 
+                masonry: {
+                    columnWidth: columnWidth
                 }
             });
         });
-    
+
         var $optionSets = $('#options .gallery-option-set'),
         $optionLinks = $optionSets.find('a');
-    
+
         $optionLinks.click( function(){
             var $this = $(this);
             if ($this.hasClass('active')) {
@@ -2821,7 +2821,7 @@ colorAdminApp.controller('galleryController', function($scope, $rootScope, $stat
             var $optionSet = $this.parents('.gallery-option-set');
             $optionSet.find('.active').removeClass('active');
             $this.addClass('active');
-    
+
             var options = {};
             var key = $optionSet.attr('data-option-key');
             var value = $this.attr('data-option-value');
@@ -2980,7 +2980,7 @@ colorAdminApp.controller('pageWithTransparentSidebarController', function($scope
 colorAdminApp.controller('extraTimelineController', function($scope, $rootScope, $state) {
     angular.element(document).ready(function () {
         var mapDefault;
-    
+
         function initialize() {
             var mapOptions = {
                 zoom: 6,
@@ -2990,11 +2990,11 @@ colorAdminApp.controller('extraTimelineController', function($scope, $rootScope,
             };
             mapDefault = new google.maps.Map(document.getElementById('google-map'), mapOptions);
         }
-    
+
         $(window).unbind('googleMapLoaded');
         $(window).bind('googleMapLoaded', initialize);
         $.getScript("http://maps.google.com/maps/api/js?sensor=false&callback=handleGoogleMapLoaded");
-    
+
         $(window).resize(function() {
             google.maps.event.trigger(mapDefault, "resize");
         });
@@ -3010,7 +3010,7 @@ colorAdminApp.controller('comingSoonController', function($scope, $rootScope, $s
     $rootScope.setting.layout.pageWithoutHeader = true;
     $rootScope.setting.layout.pageBgWhite = true;
     $rootScope.setting.layout.paceTop = true;
-    
+
     angular.element(document).ready(function () {
         var newYear = new Date();
         newYear = new Date(newYear.getFullYear() + 1, 1 - 1, 1);
@@ -3036,7 +3036,7 @@ colorAdminApp.controller('errorController', function($scope, $rootScope, $state)
 colorAdminApp.controller('loginV1Controller', function($scope, $rootScope, $state) {
     $rootScope.setting.layout.pageWithoutHeader = true;
     $rootScope.setting.layout.paceTop = true;
-    
+
     $scope.submitForm = function(form) {
         $state.go('app.dashboard.v2');
     };
@@ -3050,23 +3050,23 @@ colorAdminApp.controller('loginV1Controller', function($scope, $rootScope, $stat
 colorAdminApp.controller('loginV2Controller', function($scope, $rootScope, $state) {
     $rootScope.setting.layout.pageWithoutHeader = true;
     $rootScope.setting.layout.paceTop = true;
-    
+
     $scope.submitForm = function(form) {
         $state.go('app.dashboard.v2');
     };
-    
+
     angular.element(document).ready(function () {
         $('[data-click="change-bg"]').click(function() {
             var targetImage = '[data-id="login-cover-image"]';
             var targetImageSrc = $(this).find('img').attr('src');
             var targetImageHtml = '<img src="'+ targetImageSrc +'" data-id="login-cover-image" />';
-        
+
             $('.login-cover-image').prepend(targetImageHtml);
             $(targetImage).not('[src="'+ targetImageSrc +'"]').fadeOut('slow', function() {
                 $(this).remove();
             });
             $('[data-click="change-bg"]').closest('li').removeClass('active');
-            $(this).closest('li').addClass('active');	
+            $(this).closest('li').addClass('active');
         });
     });
 });
@@ -3080,7 +3080,7 @@ colorAdminApp.controller('loginV3Controller', function($scope, $rootScope, $stat
     $rootScope.setting.layout.pageWithoutHeader = true;
     $rootScope.setting.layout.paceTop = true;
     $rootScope.setting.layout.pageBgWhite = true;
-    
+
     $scope.submitForm = function(form) {
         $state.go('app.dashboard.v2');
     };
@@ -3095,7 +3095,7 @@ colorAdminApp.controller('registerV3Controller', function($scope, $rootScope, $s
     $rootScope.setting.layout.pageWithoutHeader = true;
     $rootScope.setting.layout.paceTop = true;
     $rootScope.setting.layout.pageBgWhite = true;
-    
+
     $scope.submitForm = function(form) {
         $state.go('app.dashboard.v2');
     };
